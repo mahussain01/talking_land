@@ -1,0 +1,16 @@
+Secure Secrets
+Add the following secrets to your GitHub repository:
+
+DOCKER_USERNAME: Your Docker Hub username.
+DOCKER_PASSWORD: Your Docker Hub password or access token.
+KUBECONFIG: Base64-encoded Kubernetes configuration.
+
+To generate the base64-encoded KUBECONFIG:
+
+bash: cat ~/.kube/config | base64
+
+
+
+Rollback Mechanism
+
+"The kubectl rollout undo" command ensures the previous deployment state is restored if a failure is detected during rollout.
